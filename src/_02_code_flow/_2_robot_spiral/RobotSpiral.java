@@ -21,22 +21,25 @@ public class RobotSpiral {
 			//        Start its value as zero.
         int spiralLines = 0;
 		// LOOP. Start a while loop to repeat the COLOR, DRAW, TURN, and COUNT code below until 50 lines have been drawn
+while(spiralLines<10000) {
+			// COLOR.   Have the robot set a random pen color:      
+	gy.setRandomPenColor();
 
-			// COLOR.   Have the robot set a random pen color:      setRandomPenColor()
-
-			// DRAW.    Move the robot (5*count) pixels
+			// DRAW.    
+	gy.move(5*spiralLines);
 			//          count is the name of the variable you created earlier
 
-			// TURN.    Turn the robot (360/7) degrees to the right
+			// TURN.    
+	gy.turn(360/7);
 
-			// COUNT.   Increase the count of how many lines have been drawn so far ( count+=1 )
+			// COUNT.   Increase the count of how many lines have been drawn so far 
+	spiralLines+=1;
 
 			// Change the robot pen width to the current value of the count variable 
-
+     gy.setPenWidth(spiralLines);
 
 		//  End the while loop here
-
-		
+}
 		// Run the program. 
 		// Check the pattern against the picture in the recipe. If it matches, you are done!
 		
